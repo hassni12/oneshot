@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect,useState}from "react";
 import { Link } from "react-router-dom";
 import Whitelogo from "../assets/images/logo/oneshot-white.png";
 import Pinklogo from "../assets/images/logo/oneshot-pink.png";
@@ -7,6 +7,24 @@ import heroImage from "../assets/images/m.png";
 import { BsFilterRight } from "react-icons/bs";
 
 const Header = () => {
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+  });
+
+
+
+  const handleScroll = () => {
+    if (window.scrollY > 90) {
+  
+      setSticky(true);
+    } else if (window.scrollY < 90) {
+      setSticky(false);
+    }
+  };
+
   return (
     <header >
       <nav className="navbar navbar-expand-lg navbar-sticky fixed-top ">
@@ -40,26 +58,26 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item active">
-                <Link className="nav-link nav-link-hover scroll active " to="#home">
+                <Link className="nav-link  scroll active " to="#home">
                   Home
                 </Link>
               </li>
-              <li className="nav-item nav-link-hover">
+              <li className="nav-item">
                 <Link className="nav-link scroll"  to="#features">
                   Features
                 </Link>
               </li>
-              <li className="nav-item nav-link-hover">
+              <li className="nav-item ">
                 <Link className="nav-link scroll" to="#screen">
                   Screenshots
                 </Link>
               </li>
-              <li className="nav-item nav-link-hover">
+              <li className="nav-item ">
                 <Link className="nav-link scroll" to="#pricing">
                   Pricing
                 </Link>
               </li>
-              <li className="nav-item nav-link-hover">
+              <li className="nav-item ">
                 <Link className="nav-link scroll" to="#contact">
                   Contact
                 </Link>
