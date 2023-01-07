@@ -9,9 +9,9 @@ import { BsFilterRight } from "react-icons/bs";
 const Header = () => {
   return (
     <header >
-      <nav className="navbar navbar-expand-lg navbar-sticky fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-sticky fixed-top ">
         <div className="container">
-          <Link className="navbar-brand " to="#">
+          <Link className="navbar-brand" to="#">
             <img
               src={Whitelogo}
               alt="logo"
@@ -32,9 +32,9 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon">
+            <span className="navbar-toggler-icons">
               {" "}
-              {/* <BsFilterRight /> */}
+              <BsFilterRight />
             </span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
