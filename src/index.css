@@ -1,13 +1,336 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* 
+======== :: INDEX OF CSS :: *******
+:: 1.0 WEB FONTS 
+:: 2.0 GLOBAL Variable Define CSS
+:: 3.0 COMMON CSS 
+:: 4.0 HEADER CSS 
+:: 5.0 HOME CSS
+:: 6.0 Counter CSS 
+:: 7.0 Promo CSS
+:: 8.0 Features CSS
+:: 9.0 app-screenshots CSS
+:: 10.0 pricing CSS
+:: 11.0 Contact CSS
+:: 12.0 Footer CSS
+:: 13.0 Scroll Top CSS */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800;900&display=swap");
+
+:root {
+  /* Background Color */
+  --bg-white: #fff;
+  --bg-black: #2c2c2c;
+  --bg-light-pink: #ff007a;
+  --bg-light-gray: #f6f9fe;
+  --bg-gradient: linear-gradient(to top, #ff007a 0%, rgba(142, 0, 116, 1) 100%);
+  --bg-card-shadow: 0 0.188rem 1.25rem 0px rgba(0, 0, 0, 0.06);
+  --bg-card-shadow: 0 2rem 5rem rgb(0, 0, 0, 0.06);
+  --bg-light-gray-1: #eee;
+
+  /* Text Color */
+  --primary-font: "Poppins", sans-serif;
+  --text-white: #fff;
+  --text-black: #2c2c2c;
+  --text-light-black: #444;
+  --text-light-pink: #ff007a;
+  --text-light-gray: #7e8085;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* body {
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  line-height: 1.75rem;
+  background: var(--bg-white);
+  color: var(--text-black);
+  overflow-x: hidden;
+}
+h1 {
+  color: var(--text-white);
+  font-size: 3.563rem;
+  line-height: 4.563rem;
+  letter-spacing: 0.125rem;
+  font-weight: 400;
+}
+
+h2 {
+  color: var(--text-black);
+  font-size: 2.875rem;
+  line-height: 3.75rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.563rem;
+  font-weight: 400;
+  color: var(--text-black);
+  line-height: 2.375rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.063rem;
+  line-height: 1.688rem;
+  color: var(--text-light-pink);
+  text-transform: uppercase;
+}
+
+section,
+.section {
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+p {
+  margin-bottom: 0;
+}
+a {
+  color: var(--text-light-black);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+a:hover,
+a:focus {
+  color: var(--text-light-pink);
+}
+
+a,
+a:hover,
+a:focus,
+.btn:focus {
+  text-decoration: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol li,
+ul li {
+  list-style: none;
+}
+button,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+.btn {
+  font-size: 0.938rem;
+  font-weight: 500;
+  color: var(--text-white);
+  line-height: 1;
+  text-align: center;
+  padding: 1.125rem 1.875rem;
+  border: 0 none;
+  border-radius: 0.375rem;
+  outline: 0 none;
+  position: relative;
+  z-index: 1;
+}
+.btn,
+.btn:active,
+.btn.sApp-btn:before,
+.bg-overlay::after {
+  background: var(--bg-gradient);
+}
+.btn:hover {
+  color: var(--text-white);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+/*SECTION PADDING*/
+.ptb_100 {
+  padding: 100px 0;
+}
+
+/* HEADER TOP */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: transparent;
+}
+
+
+/* On Scroll Fixed Navbar  
+.nav-link-hover.active,
+.nav-link-hover :hover{
+  
+  color: #ff007a !important;
+
+} */
+.navbar-sticky-on .navbar-nav .nav-item:hover,
+.navbar-sticky-on .navbar-nav .nav-item:active{
+    color: #ff007a !important;
+}
+.navbar-sticky-on .navbar-nav .nav-link {
+    color:var(--text-light-gray) !important;
+}
+.navbar .navbar-brand-sticky {
+    display: none;
+} 
+.navbar-sticky-on .navbar-brand-regular {
+    display: none;
+} 
+.navbar-sticky-on .navbar-brand-sticky {
+    display: inline;
+}
+.navbar-sticky {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.navbar-sticky-transitioned {
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.navbar-sticky-moved-up {
+    position: fixed;
+    top: 0;
+    background:var(--bg-white);
+    margin-top: -6.25rem;
+} 
+
+.navbar-sticky-on {
+    margin-top: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+}
+
+
+/* HOME */
+
+#home{
+  min-height: 900px;
+  background: rgb(0, 0, 0, 0) url(./assets/images/bg.png) no-repeat scroll left center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#home .home_text h2 {
+  font-size: 3.938rem;
+  font-weight: 700;
+  line-height:4.938rem;
+  color:var(--text-white);
+  padding:1.063rem  0;
+}
+
+#home .home_text p {
+  color: var(--text-white);
+  font-size: 1rem;
+  padding:1.063rem  0;
+}
+
+
+#home .home-download-btn{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+
+#home .home-download-btn .btn{
+  color: var(--text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 3rem;
+  margin-left: 1.5rem;
+
+
+}
+
+
+#home .home-download-btn .btn:first-child{
+  margin-left: 0;
+}
+
+#home .home-download-btn .btn:hover{
+  transform: translateY(-.5rem);
+  -moz-transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+
+}
+.home-image{
+  text-align: right;
+  transform: rotate(-345deg);
+}
+
+.home-image img{
+  animation: float 4s linear infinite;
+}
+@keyframes float {
+  0% ,100%{
+    transform: translateY(0rem)
+  }
+  50%{
+    transform: translateY(-3rem)
+  }
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1030px){
+
+}
+
+
+@media (max-width:991px){
+ /* common css */
+h1,h2{
+  font-size: 2.5rem;
+}
+
+
+}
+
+@media (max-width:768px){
+
 }
