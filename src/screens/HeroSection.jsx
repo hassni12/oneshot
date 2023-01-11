@@ -28,14 +28,16 @@ export const HeroSection = () => {
                   <span></span>Play Store
                 </Link>
                 <Link to="#" className="btn btn-bordered mt-4">
-                  <span ></span>App Store
+                  <span></span>App Store
                 </Link>
               </div>
             </div>
           </div>
           <div className="col-sm-12 col-lg-6 ">
-            <div className="home-image">            <img src={heroImage} alt="" className="img-fluid" />
-</div>
+            <div className="home-image">
+              {" "}
+              <img src={heroImage} alt="" className="img-fluid" />
+            </div>
           </div>
         </div>
       </div>
