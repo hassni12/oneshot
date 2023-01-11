@@ -177,18 +177,18 @@ img {
   background: transparent;
 }
 
+.nav-link {
+  color: rgb(255, 255, 255) !important;
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+}
 
-.nav-link{
-  
-  color: rgb(228, 221, 221)!important;
-  font-size: 1.125rem!important;
-  font-weight: 600!important;
-  }
-
-
-.navbar-sticky-on .navbar-nav .nav-item:hover,
-.navbar-sticky-on .navbar-nav .nav-item:active {
+.navbar-sticky-on .navbar-nav .nav-link:hover,
+.navbar-sticky-on .navbar-nav .nav-link:active {
   color: #ff007a !important;
+}
+.navbar-sticky-on .navbar-nav .nav-link {
+  color: var(--text-light-gray) !important;
 }
 .navbar-sticky-on .navbar-nav {
   color: var(--text-light-gray) !important;
@@ -298,6 +298,43 @@ img {
   }
 }
 
+/* ====================== */
+/* COUNTER AREA */
+/* ====================== */
+
+.counter_area {
+  padding: 6rem;
+}
+
+.single_counter {
+  position: relative;
+}
+
+.single_counter span {
+  font-size: 3rem;
+  background: var(--bg-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.single_counter::after {
+  position: absolute;
+  content: "";
+  height: 70%;
+  width: 0.1rem;
+  background: var(--bg-black);
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%);
+  opacity: 0.15;
+}
+
+.single_counter:last-child::after{
+  display: none;
+}
+
+
 @media (max-width: 1030px) {
 }
 
@@ -307,9 +344,9 @@ img {
   h2 {
     font-size: 2.5rem;
   }
-/* =========================================== */
+  /* =========================================== */
   /* navbar */
-/* =================================================== */
+  /* =================================================== */
   .navbar {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -321,80 +358,75 @@ img {
     max-width: 60%;
   }
   .navbar-toggler:focus,
-  .navbar-toggler:active{
-    outline: none;
+  .navbar-toggler:active {
+    outline: none !important;
     box-shadow: none;
   }
- 
- .navbar-toggler-icons {
-    color: var(--text-white);
+
+  .navbar-toggler-icons {
+    color: rgb(0, 0, 0);
     height: 1.5em;
     width: 1.5em;
   }
- 
-.navbar .navbar-nav{
-  background: var(--bg-white);
-  border-radius: .5rem;
-  align-items: center;
 
-}
+  .navbar .navbar-nav {
+    background: var(--bg-white);
+    border-radius: 0.5rem;
+    align-items: center;
+  }
 
+  .navbar .navbar-nav .nav-item {
+    padding-left: 0;
+  }
 
-.navbar .navbar-nav .nav-link{
-padding: 0.7rem 1rem !important;
-color:var(--text-light-gray)!important;
-font-size: 1rem!important;
-font-weight: 400!important;
-}
-/* ====================================== */
-/* Home */
-/* ========================================= */
-#home{
-  padding-top: 7rem;
-}
+  .navbar .navbar-nav .nav-link {
+    padding: 0.7rem 1rem !important;
+    color: var(--text-light-gray) !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+  }
+  /* ====================================== */
+  /* Home */
+  /* ========================================= */
+  #home {
+    padding-top: 7rem;
+  }
 
-#home .row{
+  #home .row {
+    flex-direction: column-reverse;
+  }
+  #home .home_text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  #home .home-download-btn {
+    justify-content: center;
+  }
+  .home-image {
+    text-align: center;
+  }
+  .home-image img {
+    max-width: 60%;
+  }
 
-  flex-direction: column-reverse;
-}
-#home .home_text{
-  text-align: center;
-  margin-bottom: 2rem;
-}
-#home .home-download-btn{
-  justify-content: center;
-}
-.home-image{
-
-  text-align: center;
-}
-.home-image img{
-  max-width: 60%;
-}
-
-
-#home .home-download-btn .btn {
-
-  padding: 1rem 2rem;
-  /* margin-left: 1.5rem; */
-}
+  #home .home-download-btn .btn {
+    padding: 1rem 2rem;
+    /* margin-left: 1.5rem; */
+  }
 }
 
 @media (max-width: 768px) {
+  /* home  */
+  #home {
+    padding-top: 7rem;
+  }
+  #home .home_text h2 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
 
-/* home  */
-#home {
-  padding-top: 7rem;
-}
-#home .home_text h2{
-  font-size: 2.4rem;
-  line-height: 3rem;
-}
-
-.home-image{
-  text-align: center;
-  transform: rotate(0deg);
-
-}
-
+  .home-image {
+    text-align: center;
+    transform: rotate(0deg);
+  }
 }

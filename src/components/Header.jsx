@@ -4,6 +4,7 @@ import Whitelogo from "../assets/images/logo/oneshot-white.png";
 import Pinklogo from "../assets/images/logo/oneshot-pink.png";
 import heroImage from "../assets/images/m.png";
 // import {} from ""
+import "./header.css"
 import { BsFilterRight } from "react-icons/bs";
 
 const Header = () => {
@@ -26,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header >
+    <header   className={`header${sticky ? " sticky navbar-sticky-on " : ""}`}>
       <nav className="navbar navbar-expand-lg navbar-sticky fixed-top ">
         <div className="container">
           <Link className="navbar-brand" to="#">
@@ -58,7 +59,7 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item active">
-                <Link className="nav-link  scroll active " to="#home">
+                <Link className="nav-link scroll active " to="#home">
                   Home
                 </Link>
               </li>
