@@ -303,7 +303,7 @@ img {
 /* ====================== */
 
 .counter_area {
-  padding: 6rem;
+  padding: 2rem 1rem;
 }
 
 .single_counter {
@@ -330,10 +330,88 @@ img {
   opacity: 0.15;
 }
 
-.single_counter:last-child::after{
+.single_counter:last-child::after {
   display: none;
 }
 
+/* ================= */
+/* PROMO */
+/* ================== */
+
+.promo_section {
+  padding: 3.25rem 0 4rem;
+}
+
+.section_heading {
+  margin-bottom: 2.8rem;
+}
+
+.section_heading > h2 {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+.section_heading > h2::after {
+  position: absolute;
+  content: "";
+  height: 0.125rem;
+  width: 4.56rem;
+  background: var(--bg-light-pink);
+  bottom: 1.1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.section_heading h2 span {
+  font-weight: 400;
+  font-size: 2rem;
+}
+.single_promo_hover {
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+}
+.single_promo_1{
+  box-shadow: 0 3px 20px 0px rgb(0 0 0 /12%);
+  border-radius: 1.5rem;
+  padding: 1.875rem 2.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  margin: 0rem 1rem 2rem;
+
+
+
+}
+.single_promo_1:before{
+  position:absolute;
+  content: '';
+  width: .0675;
+  height: .1rem;
+  top: 0rem;
+  left:0rem;
+  border-radius: 50%;
+  -webkit-transition: all .8s ease-out;
+  -ms-transition: all .2s ease-out;
+  transition: all .8s ease-out;
+
+
+}
+.single_promo_1:hover:before{
+  width: 100%;
+  background: var(--bg-gradient);
+
+}
+.single_promo_1:hover{
+  box-shadow: 0 2rem 5rem 0px rgb(0 0 0 /12%);
+
+}
+
+.single_promo_1 span{
+  background-image: url(./assets/images/promo-icon-bg.png);
+  padding: 54px 0 57px 0;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
 
 @media (max-width: 1030px) {
 }
@@ -428,5 +506,28 @@ img {
   .home-image {
     text-align: center;
     transform: rotate(0deg);
+  }
+
+  /* counter section */
+  .single_counter span {
+    font-size: 2.5rem;
+  }
+  .counter_inner h5 {
+    font-size: 1.2rem;
+  }
+
+  .single_counter:nth-child(2)::after {
+    /* display: none; */
+  }
+}
+@media (max-width: 468px) {
+  .single_counter:nth-child(2)::after {
+    display: none;
+  }
+  .single_counter span {
+    font-size: 2rem;
+  }
+  .counter_inner h5 {
+    font-size: 1rem;
   }
 }

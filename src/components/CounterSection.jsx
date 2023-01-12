@@ -18,7 +18,6 @@ export const CounterSection = () => {
                   onExit={() => setCounterOn(false)}
                 >
                   <span className="counter fw-bold">
-                    {" "}
                     {counterOn && <CountUp start={0} end={10} />}
                   </span>
                 </ScrollTrigger>
