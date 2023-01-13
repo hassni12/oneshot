@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 
-export const CounterSection = () => {
+ const CounterSection = () => {
   const [counterOn, setCounterOn] = useState(false);
 
   return (
@@ -86,3 +86,4 @@ export const CounterSection = () => {
     </section>
   );
 };
+export default CounterSection

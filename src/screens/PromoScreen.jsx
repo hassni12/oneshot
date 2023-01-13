@@ -66,3 +66,4 @@ export const PromoScreen = () => {
     </section>
   );
 };
+export default PromoScreen
