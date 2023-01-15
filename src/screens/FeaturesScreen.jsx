@@ -20,7 +20,7 @@ export const FeaturesScreen = () => {
             </div>
             <div className="col-md-5">
               <div className="feature_img">
-                <img src={Image} className="img-fluid" alt="image" />
+                <img src={Image} className="img-fluid" alt="features" />
               </div>
             </div>
           </div>

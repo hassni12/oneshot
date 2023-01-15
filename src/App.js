@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
-import { HeroSection,CounterSection,FeaturesScreen,PromoScreen } from "./screens/index";
+import { HeroSection,CounterSection,FeaturesScreen,PromoScreen ,ScreenShotsCarousel,PricingScreen} from "./screens/index";
 
 function App() {
   return (
@@ -12,6 +12,10 @@ function App() {
       <CounterSection />
       <PromoScreen />
       <FeaturesScreen/>
+     <ScreenShotsCarousel />
+     <PricingScreen/>
+
+
     </>
   );
 }
